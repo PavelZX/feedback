@@ -37,13 +37,57 @@ haves...
   - [Yii2 Notification](https://github.com/webzop/yii2-notifications)
 * Websocket Based Chat System (Added to the backend) - [Yii2 Websocket](https://github.com/consik/yii2-websocket)
 
-## **@TODO**
-* _Production ready_
-* _Automated Testing_
-* _Dockerize_?
-
 ## Installation/Usage
 
 - [Wiki](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki)
 - [Getting Started](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki/Getting-Started)
 - [Setting Up](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki/Setting-up)
+
+RUN
+Clone this sources from Git
+Run vagrant up.
+It will start VM creation and Provisioning. Could take some time 15-30 min... Drink coffee and get back for complete virtual server with Yi2 project ready for play !
+If you got an error regarding Composer and GitHub API requests limitation during provisioning - go to /provisioning/main.yml, uncomment var and add your GitHub oAuth token into github_oauth_token variable
+PLAY
+Ok, now if everything went fine you can access these Urls in your browser
+
+http://yii2.local/ - frontend app
+
+http://admin.yii2.local/ - backend app
+
+http://phpmyadmin.yii2.local/ - phpMyAdmin
+
+http://adminer.yii2.local/ - Adminer (Lightweight and simple GUI manager for MySQL, PostgreSQL, SQLite, MS SQL, Oracle, SimpleDB, Elasticsearch and MongoDB)
+
+Gii code generator should be called like this http://yii2.local/index.php?r=gii
+
+Note : These local domains .local will be available on your host machine only if hosts file was modified correctly. It should be done automatically by vagrant-hostsmanager plugin. But if url http://yii2.local/ or other is not found by your browser - make sure your hosts file contain correct assignment of VM IP and local domains:
+It should have such lines :
+
+192.168.33.33 yii2.local
+192.168.33.33 admin.yii2.local
+192.168.33.33 phpmyadmin.yii2.local
+192.168.33.33 adminer.yii2.local
+File location. On Linux /etc/hosts. On Windows %SystemRoot%\system32\drivers\etc\hosts
+
+Let's make something
+Go to Gii
+Go to Model Generator
+Input there ...  
+Table Name : actor  
+Model Class : Actor  
+Namespace : frontend\models
+
+Press - Preview and then Generate
+Go to CRUD Generator
+Input there ...  
+Model Class : frontend\models\Actor  
+Search Model Class : frontend\models\ActorSearch  
+Controller Class : frontend\controllers\ActorController
+
+Press - Preview and then Generate
+And now your Actor CRUD page is generated. You can access it here http://yii2.local/index.php?r=actor
+Continue playing with other Models, modify code (on your host machine in folder .../try-yii2/yii2-app-advanced) make relations between Models etc. Whatever you wish!
+Getting deeper ...
+In try-yii2 folder run vagrant ssh to access virtual dev server via SSH. You can modify and setup additionally anything you want.
+Or modify Ansible provisioning YML files (if you are familiar with it) and run vagrant provision to update server config (WARNING! I can't guarantee that your changes will not be overwritten!)
