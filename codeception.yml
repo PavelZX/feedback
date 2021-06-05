@@ -1,9 +1,17 @@
-# global codeception file to run tests from all apps
 include:
-  - common
-  - frontend
-  - backend
+  - tests/common
+  - tests/console
+  - tests/backend
+  - tests/frontend
+  - tests/api
+
 paths:
-  log: console/runtime/logs
+  log: tests/_output
+
 settings:
   colors: true
+
+db:
+  dsn:
+  username:
+  password:

@@ -1,34 +1,34 @@
 <?php
 
 use yii\helpers\Html;
-use yii\web\View;
+use rmrevin\yii\fontawesome\FAS;
 
-/** @var View $this */
-/** @var string $name */
-/** @var string $message */
-/** @var Exception $exception */
+/* @var $this yii\web\View */
+/* @var $name string */
+/* @var $message string */
+/* @var $exception Exception */
 
 $this->title = $name;
+$statusCode = property_exists($exception, 'statusCode') ? $exception->statusCode : 500;
+$textColor = $statusCode == 500? 'danger': 'warning';
 ?>
-<section class="content">
 
     <div class="error-page">
-        <h2 class="headline text-danger"><i class="fas fa-exclamation-triangle"></i></h2>
+    <h2 class="headline text-<?php echo $textColor?>"><?php echo $statusCode ?></h2>
 
-        <div class="error-content">
-            <h3><?= $name ?></h3>
+    <div class="error-content">
+        <h3 class="font-weight-bold"><?php echo FAS::icon('exclamation-triangle', ['class' => "text-$textColor"]).' '.nl2br(Html::encode($message)) ?></h3>
 
-            <p>
-                <?= nl2br(Html::encode($message)) ?>
-            </p>
-
-            <p>
-                The above error occurred while the Web server was processing your request.
-                Please contact us if you think this is a server error. Thank you.
-                Meanwhile, you may <?= Html::a('return to dashboard', Yii::$app->homeUrl) ?>
-            </p>
-
-        </div>
+        <p>
+            <?php echo Yii::t('backend', 'Oops! Something went wrong... You may audit the error by reviewing the system logs or the application timeline.') ?>
+        </p>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <?php echo Html::a(FAS::icon('stream').' '.Yii::t('backend', 'Go to timeline'), ['/timeline-event/index'], ['class' => ['btn', 'btn-primary', 'btn-lg']]) ?>
+            </li>
+            <li class="list-inline-item">
+                <?php echo Html::a(FAS::icon('clipboard-list').' '.Yii::t('backend', 'Go to logs'), ['/system/log/index'], ['class' => ['btn', 'btn-secondary', 'btn-lg']]) ?>
+            </li>
+        </ul>
     </div>
-
-</section>
+</div>

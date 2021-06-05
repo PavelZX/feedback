@@ -1,93 +1,148 @@
-![Yii Logo](https://www.yiiframework.com/image/yii_logo_light.svg)
-# Yii 2 Advanced Project Template With Few Additions
+# Yii 2 Starter Kit
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/deadmantfa/yii2-advanced-template-starter?style=for-the-badge)
-![GitHub Release Date](https://img.shields.io/github/release-date/deadmantfa/yii2-advanced-template-starter?style=for-the-badge)
-![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/deadmantfa/yii2-advanced-template-starter?style=for-the-badge)
-![GitHub release (latest by SemVer)](https://img.shields.io/github/downloads/deadmantfa/yii2-advanced-template-starter/latest/total?sort=semver&style=for-the-badge)
-![Packagist Stars](https://img.shields.io/packagist/stars/deadmantfa/yii2-advanced-template-starter?style=for-the-badge)
-![Maintenance](https://img.shields.io/maintenance/yes/2021?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/deadmantfa/yii2-advanced-template-starter?style=for-the-badge)
+<!-- BADGES/ -->
 
-Yii 2 Advanced Project Template is a skeleton Yii 2 application best for developing complex Web applications with
-multiple tiers.
+[![Packagist](https://img.shields.io/packagist/v/yii2-starter-kit/yii2-starter-kit.svg)](https://packagist.org/packages/yii2-starter-kit/yii2-starter-kit)
+[![Packagist](https://img.shields.io/packagist/dt/yii2-starter-kit/yii2-starter-kit.svg)](https://packagist.org/packages/yii2-starter-kit/yii2-starter-kit)
+[![Build Status](https://travis-ci.org/yii2-starter-kit/yii2-starter-kit.svg?branch=master)](https://travis-ci.org/yii2-starter-kit/yii2-starter-kit)
 
-Uses Vagrant development environment, local usage without vagrant is possible but will not be supported by me there are
-other tutorials that can help you.
+<!-- /BADGES -->
 
-This template is created reduce repetitive work that is required to start off a project with all the modern must
-haves...
+This is Yii2 start application template.
 
-## Features
+It was created and developing as a fast start for building an advanced sites based on Yii2.
 
-* User Module, RBAC & 2FA - [Yii2 Usaruio](https://yii2-usuario.readthedocs.io/en/latest/)
-* OAuth2 Server Implementation - [Yii2 OAuth2 Server](https://github.com/chervand/yii2-oauth2-server)
-* ElasticSearch Implementation - [Yii2 ElasticSearch](https://github.com/Mirocow/yii2-elasticsearch)
-* ElasticSearch Logs - [Yii2 ElasticSearch Log](https://github.com/Mirocow/yii2-elasticsearch-log)
-* ElasticSearch Debug - [Yii2 ElasticSearch Debug](https://github.com/Mirocow/yii2-elasticsearch-debug)
-* Enhanced Gii - [Yii2 Enhanced Gii](https://github.com/mootensai/yii2-enhanced-gii)
-* Relationship Trait (Save Related Models) - [Yii2 Relation Trait](https://github.com/mootensai/yii2-relation-trait)
-* RESTful APi Structure
-* [ElasticSearch & Kibana](https://www.elastic.co/products/elastic-stack)
-* Local SSL - [mkcert](https://github.com/FiloSottile/mkcert)
-* Vagrant - [Vagrant](https://www.vagrantup.com/)
-* Audit Trail - [Yii2 Audit](https://bedezign.github.io/yii2-audit/)
-* AdminLTE Theme v3 (Added to the backend) - [Yii2 Adminlte Asset](https://github.com/dmstr/yii2-adminlte-asset)
-* Multi-Channel Notification System (Added to the backend)
-  - [Yii2 Notification](https://github.com/webzop/yii2-notifications)
-* Websocket Based Chat System (Added to the backend) - [Yii2 Websocket](https://github.com/consik/yii2-websocket)
+It covers typical use cases for a new project and will help you not to waste your time doing the same work in every project
 
-## Installation/Usage
+## Before you start
+Please, consider helping project via [contributions](https://github.com/yii2-starter-kit/yii2-starter-kit/issues) or [donations](#donations).
 
-- [Wiki](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki)
-- [Getting Started](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki/Getting-Started)
-- [Setting Up](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki/Setting-up)
+## TABLE OF CONTENTS
+- [Demo](#demo)
+- [Features](#features)
+- [Installation](docs/installation.md)
+    - [Manual installation](docs/installation.md#manual-installation)
+    - [Docker installation](docs/installation.md#docker-installation)
+- [Components documentation](docs/components.md)
+- [Console commands](docs/console.md)
+- [Testing](docs/testing.md)
+- [FAQ](docs/faq.md)
+- [How to contribute?](#how-to-contribute)
+- [Have any questions?](#have-any-questions)
 
-RUN
-Clone this sources from Git
-Run vagrant up.
-It will start VM creation and Provisioning. Could take some time 15-30 min... Drink coffee and get back for complete virtual server with Yi2 project ready for play !
-If you got an error regarding Composer and GitHub API requests limitation during provisioning - go to /provisioning/main.yml, uncomment var and add your GitHub oAuth token into github_oauth_token variable
-PLAY
-Ok, now if everything went fine you can access these Urls in your browser
+## Quickstart
+1. [Install composer](https://getcomposer.org)
+2. [Install docker](https://docs.docker.com/install/)
+3. [Install docker-compose](https://docs.docker.com/compose/install/)
+4. Run
+    ```bash
+    composer create-project yii2-starter-kit/yii2-starter-kit myproject.com --ignore-platform-reqs
+    cd myproject.com
+    composer run-script docker:build
+    ```
+5. Go to [http://yii2-starter-kit.localhost](http://yii2-starter-kit.localhost)
 
-http://yii2.local/ - frontend app
+## FEATURES
+### Admin backend
+- Beautiful and open source dashboard theme for backend [AdminLTE 3](https://adminlte.io/themes/v3/)
+- Content management components: articles, categories, static pages, editable menu, editable carousels, text blocks
+- Settings editor. Application settings form (based on KeyStorage component)
+- [File manager](https://github.com/MihailDev/yii2-elfinder)
+- Users, RBAC management
+- Events timeline
+- Logs viewer
+- System monitoring
 
-http://admin.yii2.local/ - backend app
+### Development tasks
+To list all available development tasks follow these steps:
+1. Install [taskctl](https://github.com/taskctl/taskctl) task runner
+2. Run ``taskctl``
 
-http://phpmyadmin.yii2.local/ - phpMyAdmin
+### I18N
+- Built-in translations:
+    - English
+    - Spanish
+    - Russian
+    - Ukrainian
+    - Chinese
+    - Vietnamese
+    - Polish
+    - Portuguese (Brazil)
+    - Indonesian (Bahasa)
+- Language switcher, built-in behavior to choose locale based on browser preferred language
+- Backend translations manager
 
-http://adminer.yii2.local/ - Adminer (Lightweight and simple GUI manager for MySQL, PostgreSQL, SQLite, MS SQL, Oracle, SimpleDB, Elasticsearch and MongoDB)
+### Users
+- Sign in
+- Sign up
+- Profile editing(avatar, locale, personal data)
+- Optional activation by email
+- OAuth authorization
+- RBAC with predefined `guest`, `user`, `manager` and `administrator` roles
+- RBAC migrations support
 
-Gii code generator should be called like this http://yii2.local/index.php?r=gii
+### Development
+- Ready-to-use Docker-based stack (php, nginx, mysql, mailcatcher)
+- .env support
+- [Webpack](https://webpack.js.org/) build configuration
+- Key-value storage service
+- Ready to use REST API module
+- [File storage component + file upload widget](https://github.com/trntv/yii2-file-kit)
+- On-demand thumbnail creation [trntv/yii2-glide](https://github.com/trntv/yii2-glide)
+- Built-in queue component [yiisoft/yii2-queue](https://github.com/yiisoft/yii2-queue)
+- Command Bus with queued and async tasks support [trntv/yii2-command-bus](https://github.com/trntv/yii2-command-bus)
+- `ExtendedMessageController` with ability to replace source code language and migrate messages between message sources
+- [Some useful shortcuts](https://github.com/yii2-starter-kit/yii2-starter-kit/blob/master/common/helpers.php)
 
-Note : These local domains .local will be available on your host machine only if hosts file was modified correctly. It should be done automatically by vagrant-hostsmanager plugin. But if url http://yii2.local/ or other is not found by your browser - make sure your hosts file contain correct assignment of VM IP and local domains:
-It should have such lines :
+### Other
+- Useful behaviors (GlobalAccessBehavior, CacheInvalidateBehavior)
+- Maintenance mode support ([more](#maintenance-mode))
+- [Aceeditor widget](https://github.com/trntv/yii2-aceeditor)
+- [Datetimepicker widget](https://github.com/trntv/yii2-bootstrap-datetimepicker),
+- [Imperavi Reactor Widget](https://github.com/asofter/yii2-imperavi-redactor),
+- [Xhprof Debug panel](https://github.com/trntv/yii2-debug-xhprof)
+- Sitemap generator
+- Extended IDE autocompletion
+- Test-ready
+- Docker support and Vagrant support
+- Built-in [mailcatcher](http://mailcatcher.me/)
+- [Swagger](https://swagger.io/) for API docs.
 
-192.168.33.33 yii2.local
-192.168.33.33 admin.yii2.local
-192.168.33.33 phpmyadmin.yii2.local
-192.168.33.33 adminer.yii2.local
-File location. On Linux /etc/hosts. On Windows %SystemRoot%\system32\drivers\etc\hosts
+## DEMO
+- Frontend: [https://yii2-starter-kit.herokuapp.com](https://yii2-starter-kit.herokuapp.com)
+- Backend: [https://yii2-starter-kit.herokuapp.com/backend](https://yii2-starter-kit.herokuapp.com/backend)
 
-Let's make something
-Go to Gii
-Go to Model Generator
-Input there ...  
-Table Name : actor  
-Model Class : Actor  
-Namespace : frontend\models
+`administrator` role account
+```
+Login: webmaster
+Password: webmaster
+```
 
-Press - Preview and then Generate
-Go to CRUD Generator
-Input there ...  
-Model Class : frontend\models\Actor  
-Search Model Class : frontend\models\ActorSearch  
-Controller Class : frontend\controllers\ActorController
+`manager` role account
+```
+Login: manager
+Password: manager
+```
 
-Press - Preview and then Generate
-And now your Actor CRUD page is generated. You can access it here http://yii2.local/index.php?r=actor
-Continue playing with other Models, modify code (on your host machine in folder .../try-yii2/yii2-app-advanced) make relations between Models etc. Whatever you wish!
-Getting deeper ...
-In try-yii2 folder run vagrant ssh to access virtual dev server via SSH. You can modify and setup additionally anything you want.
-Or modify Ansible provisioning YML files (if you are familiar with it) and run vagrant provision to update server config (WARNING! I can't guarantee that your changes will not be overwritten!)
+`user` role account
+```
+Login: user
+Password: user
+```
+
+## How to contribute?
+You can contribute in any way you want. Any help appreciated, but most of all i need help with docs (^_^)
+
+## Have any questions?
+Mail to [victor@vgr.cl](mailto:victor@vgr.cl) or [yevhen.terentiev@gmail.com](mailto:yevhen.terentiev@gmai.com)
+
+## READ MORE
+- [Yii2](https://github.com/yiisoft/yii2/tree/master/docs)
+- [Docker](https://docs.docker.com/get-started/)
+
+
+### NOTE
+This template was created mostly for developers NOT for end users.
+This is a point where you can start your application, rather than creating it from scratch.
+Good luck!
+

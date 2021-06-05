@@ -2,92 +2,29 @@
 
 namespace backend\controllers;
 
-use backend\components\Controller;
-use backend\notifications\TestNotification;
-use common\models\LoginForm;
-use common\models\User;
-use Exception;
 use Yii;
 
 /**
  * Site controller
  */
-class SiteController extends Controller
+class SiteController extends \yii\web\Controller
 {
-
     /**
-     * Displays homepage.
-     *
-     * @return string
-     * @throws Exception
+     * @inheritdoc
      */
-    public function actionIndex(): string
+    public function actions()
     {
-        return $this->render('index');
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+        ];
     }
 
-    /**
-     * Login action.
-     *
-     * @return string
-     */
-    public function actionLogin(): string
+    public function beforeAction($action)
     {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
+        $this->layout = Yii::$app->user->isGuest || !Yii::$app->user->can('loginToBackend') ? 'base' : 'common';
 
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-
-        $model->password = '';
-
-        return $this->render('login', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Logout action.
-     *
-     * @return string
-     */
-    public function actionLogout(): string
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
-
-
-    /**
-     * Displays Chat.
-     *
-     * @return string
-     * @throws Exception
-     */
-    public function actionChat(): string
-    {
-        return $this->render('chat');
-    }
-
-
-    /**
-     * Displays Chat.
-     *
-     * @return string
-     * @throws Exception
-     */
-    public function actionNotification(): string
-    {
-        if (Yii::$app->request->isAjax) {
-            $users = User::find();
-            foreach ($users->each() as $user) {
-                TestNotification::create('test', ['userId' => $user->id])->send();
-            }
-        }
-        return $this->render('notification');
+        return parent::beforeAction($action);
     }
 }
