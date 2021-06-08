@@ -46,3 +46,4 @@ phpunit.phar
 /api/web/robots.txt
 /environments/dev/common/config/main-local.php
 /environments/dev/common/config/test-local.php
+node_modules

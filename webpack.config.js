@@ -17,11 +17,11 @@ var config = {
                 ]
             },
             {
-                test: /\.less$/,
+                test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'less-loader'
+                    'sass-loader'
                 ]
             }, {
                 test: /.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
@@ -51,7 +51,7 @@ var config = {
 var frontendConfig = Object.assign({}, config, {
     entry: {
         app: path.resolve(__dirname, './frontend/web/js/app.js'),
-        style: path.resolve(__dirname, './frontend/web/css/style.less'),
+        style: path.resolve(__dirname, './frontend/web/css/style.scss'),
     },
     output: {
         filename: '[name].js',
@@ -62,7 +62,7 @@ var frontendConfig = Object.assign({}, config, {
 var backendConfig = Object.assign({}, config, {
     entry: {
         app: path.resolve(__dirname, './backend/web/js/app.js'),
-        style: path.resolve(__dirname, './backend/web/css/style.less'),
+        style: path.resolve(__dirname, './backend/web/css/style.scss'),
     },
     output: {
         filename: '[name].js',

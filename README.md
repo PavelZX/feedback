@@ -1,22 +1,3 @@
-# Yii 2 Starter Kit
-
-<!-- BADGES/ -->
-
-[![Packagist](https://img.shields.io/packagist/v/yii2-starter-kit/yii2-starter-kit.svg)](https://packagist.org/packages/yii2-starter-kit/yii2-starter-kit)
-[![Packagist](https://img.shields.io/packagist/dt/yii2-starter-kit/yii2-starter-kit.svg)](https://packagist.org/packages/yii2-starter-kit/yii2-starter-kit)
-[![Build Status](https://travis-ci.org/yii2-starter-kit/yii2-starter-kit.svg?branch=master)](https://travis-ci.org/yii2-starter-kit/yii2-starter-kit)
-
-<!-- /BADGES -->
-
-This is Yii2 start application template.
-
-It was created and developing as a fast start for building an advanced sites based on Yii2.
-
-It covers typical use cases for a new project and will help you not to waste your time doing the same work in every project
-
-## Before you start
-Please, consider helping project via [contributions](https://github.com/yii2-starter-kit/yii2-starter-kit/issues) or [donations](#donations).
-
 ## TABLE OF CONTENTS
 - [Demo](#demo)
 - [Features](#features)
@@ -108,10 +89,6 @@ To list all available development tasks follow these steps:
 - Built-in [mailcatcher](http://mailcatcher.me/)
 - [Swagger](https://swagger.io/) for API docs.
 
-## DEMO
-- Frontend: [https://yii2-starter-kit.herokuapp.com](https://yii2-starter-kit.herokuapp.com)
-- Backend: [https://yii2-starter-kit.herokuapp.com/backend](https://yii2-starter-kit.herokuapp.com/backend)
-
 `administrator` role account
 ```
 Login: webmaster
@@ -130,19 +107,7 @@ Login: user
 Password: user
 ```
 
-## How to contribute?
-You can contribute in any way you want. Any help appreciated, but most of all i need help with docs (^_^)
-
-## Have any questions?
-Mail to [victor@vgr.cl](mailto:victor@vgr.cl) or [yevhen.terentiev@gmail.com](mailto:yevhen.terentiev@gmai.com)
-
 ## READ MORE
 - [Yii2](https://github.com/yiisoft/yii2/tree/master/docs)
 - [Docker](https://docs.docker.com/get-started/)
-
-
-### NOTE
-This template was created mostly for developers NOT for end users.
-This is a point where you can start your application, rather than creating it from scratch.
-Good luck!
 
