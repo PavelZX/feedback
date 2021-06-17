@@ -5,9 +5,6 @@ namespace tests\common\unit;
 use Codeception\Test\Unit;
 use Yii;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 class KeyStorageTest extends Unit
 {
 

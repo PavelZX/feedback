@@ -19,8 +19,6 @@ use yii\helpers\Url;
  * See [AdminLTE 3 Docs](https://adminlte.io/docs/3.0/components/main-sidebar.html).
  *
  * @package backend\components\widgets
- * @author Eugine Terentev <eugine@terentev.net>
- * @author Victor Gonzalez <victor@vgr.cl>
  */
 class MainSidebarMenu extends \yii\widgets\Menu
 {

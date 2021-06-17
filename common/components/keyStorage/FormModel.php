@@ -10,7 +10,6 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Inflector;
 
 /**
- * @author Eugene Terentev <eugene@terentev.net>
  * @var array $keys Array of the keyStorage keys to be handled by this model ($key => $config)
  * Example:
  * [

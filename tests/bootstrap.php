@@ -1,7 +1,4 @@
 <?php
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 
 require __DIR__ . '/../vendor/autoload.php';
 

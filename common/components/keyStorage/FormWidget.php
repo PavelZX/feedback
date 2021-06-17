@@ -8,9 +8,6 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 class FormWidget extends Widget
 {
     /**

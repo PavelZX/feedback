@@ -7,9 +7,6 @@ use trntv\bus\interfaces\SelfHandlingCommand;
 use Yii;
 use yii\base\BaseObject;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 class AddToTimelineCommand extends BaseObject implements SelfHandlingCommand
 {
     /**

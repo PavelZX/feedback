@@ -1,7 +1,5 @@
 <?php
 /**
- * @author Eugine Terentev <eugine@terentev.net>
- * @author Victor Gonzalez <victor@vgr.cl>
  * @var yii\web\View $this
  * @var common\models\TimelineEvent $model
  * @var yii\data\ActiveDataProvider $dataProvider

@@ -1,6 +1,5 @@
 <?php
 /**
- * @author Eugene Terentev <eugene@terentev.net>
  * @var string $maintenanceText
  * @var int|string $retryAfter
  */

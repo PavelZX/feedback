@@ -1,6 +1,5 @@
 <?php
 /**
- * Author: Eugine Terentev <eugine@terentev.net>
  *
  * @var $this     \yii\web\View
  * @var $provider \probe\provider\ProviderInterface

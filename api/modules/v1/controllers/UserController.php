@@ -11,9 +11,6 @@ use yii\filters\auth\QueryParamAuth;
 use yii\rest\Controller;
 use yii\rest\OptionsAction;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 class UserController extends Controller
 {
     /**

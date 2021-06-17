@@ -1,8 +1,6 @@
 <?php
 /**
  * Yii2 Shortcuts
- * @author Eugene Terentev <eugene@terentev.net>
- * @author Victor Gonzalez <victor@vgr.cl>
  * -----
  * This file is just an example and a place where you can add your own shortcuts,
  * it doesn't pretend to be a full list of available possibilities

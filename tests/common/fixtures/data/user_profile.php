@@ -1,7 +1,5 @@
 <?php
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
+
 return [
     [
         'user_id' => 1,

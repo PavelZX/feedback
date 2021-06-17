@@ -12,9 +12,6 @@ use common\models\Article;
 use common\models\ArticleCategory;
 use common\models\User;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 class AppController extends Controller
 {
     /** @var array */

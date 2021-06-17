@@ -5,9 +5,6 @@ namespace common\validators;
 use Yii;
 use yii\validators\Validator;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 class JsonValidator extends Validator
 {
     /**

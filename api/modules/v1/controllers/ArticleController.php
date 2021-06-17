@@ -29,7 +29,6 @@ use yii\web\HttpException;
  *         )
  *     ),
  * )
- * @author Eugene Terentev <eugene@terentev.net>
  */
 class ArticleController extends ActiveController
 {

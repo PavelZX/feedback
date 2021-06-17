@@ -4,9 +4,6 @@ namespace console\controllers;
 
 use yii\console\controllers\MigrateController;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 class RbacMigrateController extends MigrateController
 {
     /**

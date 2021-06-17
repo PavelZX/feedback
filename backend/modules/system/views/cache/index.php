@@ -1,6 +1,5 @@
 <?php
 /**
- * Eugine Terentev <eugine@terentev.net>
  *
  * @var yii\data\ArrayDataProvider $dataProvider
  */

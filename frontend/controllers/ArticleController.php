@@ -10,9 +10,6 @@ use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 class ArticleController extends Controller
 {
     private const POSTS_PER_PAGE = 3;

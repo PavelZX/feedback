@@ -9,7 +9,6 @@ use yii\base\Component;
 
 /**
  * Class Maintenance
- * @author Eugene Terentev <eugene@terentev.net>
  */
 class Maintenance extends Component implements BootstrapInterface
 {

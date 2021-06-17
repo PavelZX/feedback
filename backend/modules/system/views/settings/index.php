@@ -1,7 +1,4 @@
 <?php
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 
 use common\components\keyStorage\FormWidget;
 use rmrevin\yii\fontawesome\FAS;

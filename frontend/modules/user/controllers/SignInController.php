@@ -26,7 +26,6 @@ use yii\widgets\ActiveForm;
 /**
  * Class SignInController
  * @package frontend\modules\user\controllers
- * @author Eugene Terentev <eugene@terentev.net>
  */
 class SignInController extends \yii\web\Controller
 {

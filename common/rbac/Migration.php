@@ -5,9 +5,6 @@ namespace common\rbac;
 use yii\base\Component;
 use yii\db\MigrationInterface;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 class Migration extends Component implements MigrationInterface
 {
 

@@ -8,7 +8,6 @@ use trntv\filekit\filesystem\FilesystemBuilderInterface;
 
 /**
  * Class LocalFlysystemProvider
- * @author Eugene Terentev <eugene@terentev.net>
  */
 class LocalFlysystemBuilder implements FilesystemBuilderInterface
 {

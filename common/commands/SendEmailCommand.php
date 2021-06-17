@@ -6,9 +6,6 @@ use trntv\bus\interfaces\SelfHandlingCommand;
 use yii\base\BaseObject;
 use yii\swiftmailer\Message;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
 class SendEmailCommand extends BaseObject implements SelfHandlingCommand
 {
     /**

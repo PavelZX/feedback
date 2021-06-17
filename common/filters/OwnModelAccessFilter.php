@@ -8,7 +8,6 @@ use yii\web\ForbiddenHttpException;
 
 /**
  * Class OwnModelAccessFilter
- * @author Eugene Terentev <eugene@terentev.net>
  */
 class OwnModelAccessFilter extends ActionFilter
 {
